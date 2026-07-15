@@ -1,0 +1,906 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+
+
+html {
+    font-size: 62.5%;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+
+}
+
+.heading {
+    font-size: 3.4rem;
+}
+
+.sub-heading {
+    font-size: 2rem;
+}
+
+p,
+input,
+textarea,
+label {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.btn {
+    border: none;
+    background-color: var(--button-background);
+    color: var(--button-color);
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
+
+.grid {
+    display: grid;
+}
+
+.grid-two--cols {
+
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three--cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four--cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+.container {
+    padding: 5rem 0;
+    margin: 0 10rem;
+}
+
+.header-flex {
+    margin: 0 10rem;
+}
+
+
+:root {
+    --button-color: #FFEBCD;
+    --button-background: #2736a8;
+    --btn-hover-bg-color: #4169E1;
+    --icon-color: #00FFFF;
+    --icon-background: #BBDCE5;
+    --icon-hover-bg-color: #00FFFF;
+    --icon-hover-color: #4169E1;
+    --header-text-color: #483D8B;
+    --service-section-bg: #e2f1f5;
+
+
+}
+
+header {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin-top: 1rem;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .header-logo img {
+        width: 20rem;
+        height: 5rem;
+        border-radius: 1rem;
+    }
+
+    & .nav-bar-icons {
+        & ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+
+            & li {
+                font-size: 1.8rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                position: relative;
+
+                & a {
+                    color: var(--header-text-color);
+                }
+            }
+        }
+
+    }
+}
+
+header ul li a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -1%;
+    border-bottom: 2px solid #422ec7;
+    width: 0;
+    transition: all 0.3s linear;
+
+
+}
+
+header ul li a:hover::before {
+    width: 100%;
+
+}
+
+
+/***** main  Section *****/
+
+.grid-two--cols {
+    align-items: center;
+    gap: 8rem;
+}
+
+
+main {
+    padding-bottom: 5rem;
+    position: relative;
+    margin-top: 1rem;
+    background-color: #33A1E0;
+
+    & p {
+        margin-top: 2rem;
+    }
+
+    & .btn {
+        margin-top: 3.54rem;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        transform: scaleX(-1);
+    }
+}
+
+.custom-shape-divider-bottom-1755587682 {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 2rem;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1755587682 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 92px;
+}
+
+.custom-shape-divider-bottom-1755587682 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+
+/***** End main  Section *****/
+
+
+/***** About Section *****/
+
+.about-section {
+    & .grid-three--cols {
+        gap: 10rem;
+
+    }
+
+    & .sub-heading {
+        margin: 2rem 0 1rem 0;
+        font-weight: 500;
+    }
+
+    & .research-div-1 {
+        text-align: center;
+
+        & .srch-div-1 {
+
+            & img {
+                width: 10rem;
+                background-color: var(--icon-background);
+                border-radius: 50%;
+                transition: rotate 0.3s linear;
+
+
+            }
+
+            & img:hover {
+                background-color: var(--icon-hover-color);
+                rotate: 360deg;
+            }
+
+        }
+
+    }
+
+}
+
+
+/***** End About Section *****/
+
+
+/***** service Section *****/
+
+
+
+.Services-section {
+    background-color: var(--service-section-bg);
+
+    & .grid-four--cols {
+        gap: 5rem;
+    }
+
+    & .services-div-1 {
+        padding: 2rem;
+
+        & h2 {
+            margin: 3rem 0 1.1rem 0;
+            font-size: 2rem;
+
+        }
+    }
+
+    & .services-div-img {
+        & i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .fa-brands {
+            width: 6rem;
+            height: 6rem;
+            font-size: 3rem;
+            background-color: var(--icon-background);
+            border-radius: 50%;
+            padding: 2rem;
+
+        }
+    }
+
+}
+
+.Services-section .services-div-1:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+/***** End service Section *****/
+
+/***** BLOG Section *****/
+
+.blog-section {
+    & .grid-four--cols {
+        gap: 3rem;
+    }
+
+    & .main-div {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        padding: 0 0 5rem 0;
+        transition: all 0.3s linear;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    & .main-div:hover {
+        scale: 1.1;
+    }
+
+}
+
+.blog-section .blog-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5REM;
+
+    & span {
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+        font-weight: 700;
+    }
+
+    & .fa-solid {
+        font-size: 2rem;
+        color: var(--button-background);
+    }
+
+    .date-arrow {
+        padding-right: 2.5rem;
+    }
+
+}
+
+.blog-section .blog-first-data {
+    margin: 1.5rem 0 2rem 0;
+}
+
+.blog-section .main-div {
+    & .heading-blog {
+
+        & h3 {
+            font-size: 2rem;
+            padding: 0 2rem;
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+/***** End BLOG Section *****/
+
+/*****  contact Section *****/
+
+.contact-section {
+    & input {
+        display: block;
+        margin-bottom: 3rem;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0.1rem;
+        border: 1px solid grey;
+
+    }
+
+    & textarea {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0.1rem;
+        border: 1px solid grey;
+        display: block;
+    }
+
+    & .btn {
+        margin-top: 2rem;
+    }
+
+    & .map-div {
+        & iframe {
+            width: 50rem;
+            height: 50rem;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+/***** End contact Section *****/
+
+
+/***** why choose Section *****/
+
+.why-choose-Astream .grid-three--cols {
+    gap: 10rem;
+}
+
+
+
+.why-choose-Astream .first-div {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+
+.why-choose-Astream .first-div-data {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+
+
+    & .sub-heading {
+        margin: 2rem 0 0.5rem 0;
+    }
+
+    & .one {
+        width: 4rem;
+        aspect-ratio: 1;
+        background-color: var(--icon-color);
+        border-radius: 50%;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: black;
+        align-self: flex-end;
+    }
+}
+
+
+.why-choose-Astream .first-div {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* 2nd div */
+.second-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    & img {
+        width: 90%;
+        height: 100%;
+
+    }
+
+}
+
+.second-div::after {
+    content: "";
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    background-color: var(--icon-color);
+    z-index: -1;
+    /* transition: all 0.3s linear infinite; */
+    animation: colos 8s linear infinite;
+
+}
+
+.second-div::before {
+    content: "";
+    position: absolute;
+    width: 42rem;
+    height: 42rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid gray;
+    z-index: -2;
+
+}
+
+
+
+
+
+@keyframes colos {
+    0% {
+        background-color: #33A1E0;
+    }
+
+    25% {
+        background-color: #BBDCE5;
+    }
+
+    50% {
+        background-color: #4169E1;
+
+    }
+
+    75% {
+        background-color: #FFEBCD;
+    }
+
+    100% {
+        background-color: #422ec7;
+    }
+}
+
+
+
+
+
+/* 3rd div */
+.why-choose-Astream .third-div {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+
+.why-choose-Astream .third-div-data {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+
+    & .sub-heading {
+        margin: 2rem 0 0.5rem 0;
+    }
+
+    & .one {
+        width: 4rem;
+        aspect-ratio: 1;
+        background-color: var(--icon-color);
+        border-radius: 50%;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: black;
+        align-self: flex-start;
+    }
+}
+
+
+
+/***** End why choose Section *****/
+
+
+/***** card footer Section *****/
+
+.card-footer {
+    & .grid-two--cols {
+        align-items: center;
+        /* justify-items: center; */
+    }
+}
+
+.card-footer {
+    position: relative;
+    bottom: -10rem;
+    z-index: 1;
+    margin: 0 auto;
+    padding-bottom: ;
+    /* margin-bottom: 2rem; */
+    width: 60%;
+    height: auto;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    & .text-side {
+        p {
+            margin: 1rem 0 2rem 0;
+        }
+
+        & .sub-heading {
+            font-size: 2rem;
+        }
+    }
+
+    & .img-side {
+        & img {
+            width: 30rem;
+        }
+    }
+
+    .container {
+        padding: 0;
+    }
+
+}
+
+
+/***** End card footer Section *****/
+
+/***** footer Section *****/
+
+footer {
+    /* position: absolute; */
+    padding-top: 10rem;
+    background-color: black;
+    color: #FFFFFF;
+
+    & .ist-text {
+        p {
+            margin: 1rem 0 3rem 0;
+        }
+
+    }
+}
+
+
+footer .ist-three--icons {
+    display: flex;
+    gap: 3rem;
+
+
+    & .fa-brands {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--icon-background);
+        color: blue;
+        font-size: 3rem;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        transition: all 0.3s linear;
+
+    }
+
+    & .fa-brands:hover {
+        transform: rotate(360deg);
+        background-color: var(--btn-hover-bg-color);
+        color: var(--button-color);
+    }
+
+}
+
+footer .second-div--btn li a {
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer .second-div--btn {
+    text-align: right;
+}
+
+/***** End footer Section *****/
+
+
+
+
+/***** media query Section *****/
+@media (width <=1200px) {
+    html {
+        font-size: 52.6%;
+    }
+
+    .why-choose-Astream {
+
+        & .grid-three--cols {
+
+            & .second-div::before,
+            .second-div::after {
+                width: 0;
+                height: 0;
+                background: none;
+            }
+        }
+
+    }
+
+
+
+}
+
+
+@media (width <=1100px) {
+
+    .container {
+        margin: 0 1.5rem;
+    }
+
+    .header-flex {
+        margin: 0 1.5rem;
+    }
+
+
+    .Services-section {
+        & .grid-four--cols {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+    }
+
+}
+
+
+@media (width <=999px) {
+    main {
+        & .grid {
+            /* align-items: center; */
+            justify-items: center;
+
+        }
+
+        & .grid-two--cols {
+            grid-template-columns: 1fr;
+
+            & .main-section-img {
+                order: 1;
+                width: 55%;
+
+            }
+
+            & .main-section {
+                order: 2;
+            }
+        }
+    }
+
+    footer {
+        & .grid-four--cols {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+
+            & .second-div--btn{
+                text-align: left;
+            }
+            & .first-div--icons {
+                grid-column: 1 / -1;
+                grid-row: 3 / 4;
+                padding-bottom: 50rem;
+
+            }
+        }
+
+    }
+
+
+
+}
+
+
+@media(width <=767px) {
+    .header-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        & .nav-bar-icons {
+            & ul {
+                gap: 2rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+    }
+
+
+    .about-section {
+        & .grid-three--cols {
+            grid-template-columns: 1fr;
+            justify-items: start;
+
+        }
+
+        .research-div-1 {
+            text-align: left;
+        }
+    }
+
+
+    .why-choose-Astream {
+        & .grid-three--cols {
+            grid-template-columns: 1fr;
+            gap: 4.2rem;
+
+            & .second-div {
+                width: 50%;
+            }
+
+            & .first-div {
+                order: 1;
+
+                & .first-div-data {
+                    text-align: left;
+
+                    & .one {
+                        align-self: self-start;
+                    }
+                }
+
+            }
+
+            & .third-div {
+                order: 2;
+            }
+        }
+    }
+
+    .card-footer {
+        & .grid {
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+
+        & .grid-two--cols {
+            grid-template-columns: 1fr;
+
+            & .text-side {
+                padding: 5rem;
+            }
+
+            & img {
+                /* width: 20%; */
+                /* padding: 5rem; */
+            }
+        }
+    }
+
+
+    .contact-section {
+        & .grid-two--cols {
+            grid-template-columns: 1fr;
+            align-items: center;
+            /* justify-items: center; */
+
+            & .map-div {
+                & iframe {
+                    width: 100%;
+
+                }
+            }
+
+        }
+
+        & form {
+            & .grid-two--cols {
+                gap: 0;
+            }
+        }
+    }
+
+
+    .blog-section{
+        & .grid-four--cols{
+            grid-template-columns: 1fr;
+            gap: 5rem;
+
+           & .main-div{
+            & .blog-date{
+            & .date-data{
+                margin-right: 15rem;
+                
+            }
+
+            }
+           } 
+            
+        }
+    }
+
+}
+
+
+
+
+/***** End media query Section *****/
